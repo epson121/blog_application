@@ -1,4 +1,5 @@
 class PostController < ActionController::Base
+  http_basic_authenticate_with :name => "username", :password =>"password"
   def index
     
   end

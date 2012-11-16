@@ -14,9 +14,3 @@ Currently what it does is this:
      -update of blog posts
   - has a built-in rich text formatter
 
-things that need to be done (updated):
-  - authentication
-  - comments
-  - tags
-  - search
-

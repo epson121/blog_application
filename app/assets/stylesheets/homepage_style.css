@@ -1,0 +1,28 @@
+body
+{
+    /* body style */
+    background: #999989;
+  }
+
+.homepage
+{
+    /*styles for the homepage div  */
+   margin-top: 15%;
+   margin-left: 35%; 
+}
+
+.homepage a
+{
+    /* blog link from homepage style */
+    color: black;
+    font-size: 40px;
+    font-style: normal;
+    text-decoration:none;
+}
+
+.homepage a:hover
+{
+    /* blog link from homepage style, hover */
+    background: black;
+    color:white;
+}

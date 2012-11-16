@@ -1,0 +1,67 @@
+
+
+<%= javascript_include_tag 'richtext_compressed' %>
+<%= javascript_include_tag 'html2xhtml.min' %>
+<%= stylesheet_link_tag    "rte" %>
+
+
+<%= form_for @post, :url => { :action => :create },
+				    :html => {:name => "BlogRTE", :onsubmit => "submitForm();"} do |f| %>
+
+ <%= label_tag "Title"%><br>
+  <%= f.text_field :name %><br>
+
+<script language="JavaScript" type="text/javascript">
+
+function submitForm() {
+	//make sure hidden and iframe values are in sync for all rtes before submitting form
+	updateRTEs();
+}
+
+//Usage: initRTE(imagesPath, includesPath, cssFile, genXHTML, encHTML)
+initRTE("/cbrte/images/", "/cbrte/", "", false);
+
+</script>
+
+<noscript><p><b>Javascript must be enabled to use this form.</b></p></noscript>
+
+<script language="JavaScript" type="text/javascript">
+
+//build new richTextEditor
+var rte1 = new richTextEditor('text_content');
+rte1.html = '';
+
+//enable all commands for demo
+rte1.cmdFormatBlock = true;
+rte1.cmdFontName = true;
+rte1.cmdFontSize = true;
+rte1.cmdIncreaseFontSize = true;
+rte1.cmdDecreaseFontSize = true;
+
+rte1.cmdBold = true;
+rte1.cmdItalic = true;
+rte1.cmdUnderline = true;
+rte1.cmdStrikethrough = true;
+rte1.cmdSuperscript = true;
+rte1.cmdSubscript = true;
+
+rte1.cmdJustifyLeft = true;
+rte1.cmdJustifyCenter = true;
+rte1.cmdJustifyRight = true;
+rte1.cmdJustifyFull = true;
+
+rte1.cmdOutdent = true;
+rte1.cmdIndent = true;
+rte1.cmdForeColor = true;
+rte1.cmdHiliteColor = true;
+rte1.cmdInsertLink = true;
+rte1.cmdInsertImage = true;
+rte1.cmdInsertSpecialChars = true;
+
+rte1.build();
+</script>
+
+
+  <%= f.submit "Create" %>
+<% end %>
+

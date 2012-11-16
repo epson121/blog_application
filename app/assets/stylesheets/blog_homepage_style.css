@@ -1,0 +1,53 @@
+body
+{
+    /* body Style */
+    background: #999989;
+}
+
+a
+{
+    /* blog link from homepage style */
+    color: black;
+    font-size: 10px;
+    font-style: normal;
+    text-decoration:none;
+}
+
+a:hover
+{
+    /* blog link from homepage style, hover */
+    background: black;
+    color:white;
+}
+
+
+.hr_style
+{
+    /* Style of the horizontal line */
+    margin-left: 10%;
+    margin-right: 40%;
+}
+
+.blog
+{
+    /*Style for blog entry  */
+   	margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 40%;
+    display: block;
+}
+
+.blog .subject
+{ 
+    /* style for blog subject (name of the entry) */
+   font-size: 24px;
+   font-style: italic;
+   font-variant: small-caps;
+}
+  
+.blog .body
+{
+    /* Style for the body of the entry (blog text) */
+    font-size: 16px;
+    margin-top: 1%;
+}

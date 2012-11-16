@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag "blog_homepage_style.css" %>
+<h1>Blog homepage</h1>
+<%= link_to "New Post", :controller =>"blog/post", :action => "new" %>
+
+<% if (@posts != nil)%>
+	<% @posts.each do |p|%>
+	<div id = "blog_entry", class = "blog">
+		<div id = "blog_entry_subject"class = "subject">
+			<%= p.name %>
+			<%= link_to "Edit", :controller => "blog/post", :action => "edit" , :id => p.id.to_s %>
+		</div>
+		<div id = "blog_entry_body", class = "body">
+			<%= simple_format(p.description)%>
+		</div>
+	</div>
+	<hr class = "hr_style">
+	<% end %>
+<% end%>
+
+<%= link_to "Home", :controller =>"home", :action => "index" %>
+

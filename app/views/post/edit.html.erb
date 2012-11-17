@@ -1,4 +1,5 @@
  <%= stylesheet_link_tag    "CRUD_post" %>
 <%= render 'form_update' %>
 
+<%= button_to "Delete", {:controller => 'blog/post', :action => 'destroy'}, :method => :delete%>
 <%=link_to "Back", :controller => '/blog',  :action => 'index' %>

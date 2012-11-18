@@ -4,7 +4,8 @@
 <%= javascript_include_tag 'html2xhtml.min' %>
 <%= stylesheet_link_tag    "rte" %>
 
-<%= form_for @post, :url => { :action => :update },
+<div class = "rtb_update">
+<%=form_for @post, :url => { :action => :update },
 				    :html => {:name => "BlogRTE", :onsubmit => "submitForm();"} do |f| %>
 
 <%= javascript_tag do %>
@@ -12,14 +13,9 @@
 <%end%>
 
  <%= label_tag "Title"%><br>
-  <%= f.text_field :name %><br>
- <!--
-  <%= label_tag "Body"%><br>
-  <%= f.text_area :description, :size => "50x12" %><br>
-  -->
+ <%= f.text_field :name , :size => 90 %><br><br>
   
 <script language="JavaScript" type="text/javascript">
-<!--
 function submitForm() {
 	//make sure hidden and iframe values are in sync for all rtes before submitting form
 	updateRTEs();
@@ -27,18 +23,20 @@ function submitForm() {
 
 //Usage: initRTE(imagesPath, includesPath, cssFile, genXHTML, encHTML)
 initRTE("/cbrte/images/", "/cbrte/", "", false);
-//-->
+
 </script>
 <noscript><p><b>Javascript must be enabled to use this form.</b></p></noscript>
 
 <script language="JavaScript" type="text/javascript">
-<!--
 //build new richTextEditor
 var rte1 = new richTextEditor('text_content');
 rte1.html = desc;
 
 
 //enable all commands for demo
+rte1.width = 800;
+rte1.height = 300;
+
 rte1.cmdFormatBlock = true;
 rte1.cmdFontName = true;
 rte1.cmdFontSize = true;
@@ -67,9 +65,10 @@ rte1.cmdInsertSpecialChars = true;
 
 rte1.build();
 
-//-->
 </script>
 
   <%= f.submit "Update" %>
 <% end %>
-
+<%= button_to "Delete", {:controller => 'blog/post', :action => 'destroy'}, :method => :delete%>
+<%= button_to "Back", {:controller => '/blog',  :action => 'index'} %>
+</div>

@@ -1,4 +1,9 @@
 Blog::Application.routes.draw do
+  
+  #get "comment/index"
+  #get "comment/delete"
+  #post "comment/create"
+  #post "comments/new"
   # The priority is based upon order of creation:
   # first created -> highest priority.
   match '/' => 'home#index'
@@ -11,9 +16,12 @@ Blog::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   namespace :blog do
-    resources :post
+    resources :post do
+      resources :comment
+    end
   end
 
+  map.resources :comments, :belongs_to => :posts
   # Sample resource route with options:
   #   resources :products do
   #     member do

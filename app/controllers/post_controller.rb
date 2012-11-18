@@ -1,6 +1,12 @@
 class PostController < ActionController::Base
-  http_basic_authenticate_with :name => "username", :password =>"password"
+ 
   def index
+  end
+  
+  def show
+    @post = Post.find(params[:id])
+    @comments = @post.comments.all
+    @comment = Comment.new
   end
     
   def new
@@ -32,5 +38,9 @@ class PostController < ActionController::Base
   def destroy
     Post.delete(params[:id])
     redirect_to '/blog'
+  end
+  
+  def add_comment
+    @comment = Comment.create(params[:id])
   end
 end

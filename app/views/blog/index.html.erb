@@ -14,11 +14,7 @@
 	<% @posts.each do |p|%>
 	<div id = "blog_entry", class = "blog">
 		<div id = "blog_entry_subject"class = "subject">
-			<%= p.name %>
-			<%= link_to "Edit", :controller => "blog/post", :action => "edit" , :id => p.id.to_s %>
-		</div>
-		<div id = "blog_entry_body", class = "body">
-			<%= simple_format(p.description)%>
+			<%= link_to p.name, :controller => "blog/post", :action => "show" , :id => p.id.to_s %>
 		</div>
 	</div>
 	<!--hr class = "hr_style"-->

@@ -1,1 +1,19 @@
-<h1>Posts Place</h1>
+<div id = "blog_entry", class = "blog">
+		<div id = "blog_entry_subject"class = "subject">
+			<%= @post.name %>
+			<%= link_to "Edit", :controller => "blog/post", :action => "edit" , :id => p.id.to_s %>
+		</div>
+		<div id = "blog_entry_body", class = "body">
+			<%= @post.description%>
+		</div>
+		<div id = "blog_entry_comment" class = "comment">
+			<% if (@comments != nil)%>
+				<% @comments.each do |comm|%>
+				<div id = "comment" class = "comment">
+					<%= comm.name%>
+					<%= comm.text%>
+				</div>
+				<%end%>
+			<%end%>
+		</div>
+	</div>

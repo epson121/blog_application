@@ -1,5 +1,19 @@
 body
 {
     /* body Style */
+<<<<<<< HEAD
     background: #ffffff;
+=======
+    background: #FFFFFF;
+}
+
+.rtb_update
+{
+	float:left;
+	margin-top: 2%;
+	margin-left:2%; 
+	background: #4F4F51;
+	color:white;
+	font-size: 20px;
+>>>>>>> filling-layout
 }

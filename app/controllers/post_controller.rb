@@ -1,9 +1,10 @@
 class PostController < ActionController::Base
+<<<<<<< HEAD
   http_basic_authenticate_with :name => "username", :password =>"password"
   def index
+=======
+>>>>>>> filling-layout
     
-  end
-  
   def new
     @post = Post.new
   end

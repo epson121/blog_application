@@ -1,4 +1,15 @@
  <%= stylesheet_link_tag    "CRUD_post" %>
-<%= render 'form_update' %>
+<%= stylesheet_link_tag "blog_homepage_style.css" %>
+		<div class = "header_div_title">
 
-<%=link_to "Back", :controller => '/blog',  :action => 'index' %>
+			<span> Josetxo : blog</span>
+			<span style="color: #8E8EFF" >_</span>
+		</div>
+		<div class = "header_div_menu"> 
+			<%= link_to "NewPost", new_blog_post_path %>&nbsp&nbsp
+			<%= link_to "Home", blog_path %>
+		</div>	
+<%= render 'form_update' %>
+<div>
+
+</div>

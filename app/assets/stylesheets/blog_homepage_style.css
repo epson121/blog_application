@@ -1,16 +1,55 @@
 body
 {
     /* body Style */
-    background: #999989;
+    background: #FFFFFF;
+}
+
+
+.header_div_title
+{
+    /* header div style */
+    float: left;
+    margin: 0px;
+    margin-top:0%;
+    width:30%;
+    padding:10px;
+    padding-bottom:3px;
+    background: #000000;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-style: normal;
+    font-family: Courier;
+    height:35px;
+}
+
+.header_div_menu
+{	
+    float:left;
+    width:67%;
+    height:35px;
+    padding:10px;
+    padding-bottom:3px;
+    margin: 0px;
+    margin-top:0%;
+    background: #000000;
+    color: #FFFFFF;
+    text-align: right;
+}
+	
+
+.header_div_menu a
+{
+	color: #FFFFFF;
+    font-size: 25px;
+    font-style: normal;
+    font-family: Courier;
 }
 
 a
 {
     /* blog link from homepage style */
-    color: black;
-    font-size: 10px;
-    font-style: normal;
-    text-decoration:none;
+    color: #8E8EFF;
+
 }
 
 a:hover
@@ -28,26 +67,37 @@ a:hover
     margin-right: 40%;
 }
 
+.blog_all
+{
+	float: left;
+	width: 75%;
+}
+
 .blog
 {
     /*Style for blog entry  */
-   	margin-top: 2%;
-    margin-left: 10%;
-    margin-right: 40%;
-    display: block;
+    margin-top: 10px;
+    margin-left: 25%;
 }
 
 .blog .subject
 { 
     /* style for blog subject (name of the entry) */
-   font-size: 24px;
-   font-style: italic;
-   font-variant: small-caps;
+    height:32px;
+    font-size: 30px;
+    font-style: normal;
+    font-variant: small-caps;
+    border-style:dashed;
+	border-width:2px;
+	border-color: #D3D3D3; 
+	text-align: center;
 }
   
 .blog .body
 {
     /* Style for the body of the entry (blog text) */
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:2%;
     font-size: 16px;
-    margin-top: 1%;
 }

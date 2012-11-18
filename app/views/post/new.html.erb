@@ -1,6 +1,16 @@
 <%= stylesheet_link_tag    "CRUD_post" %>
-<h1>New post form</h1>
+<%= stylesheet_link_tag "blog_homepage_style.css" %>
+		<div class = "header_div_title">
+
+			<span> Josetxo : blog</span>
+			<span style="color: #8E8EFF" >_</span>
+		</div>
+		<div class = "header_div_menu"> 
+			<%= link_to "NewPost", new_blog_post_path %>&nbsp&nbsp
+			<%= link_to "Home", blog_path %>
+		</div>	
+
 
 <%=render 'form_create'%>
 
-<%=link_to "Back", :controller => '/blog',  :action => 'index' %>
+<%= link_to "Home", blog_path %>

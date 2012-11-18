@@ -1,13 +1,13 @@
 body
 {
     /* body style */
-    background: #999989;
+    background: #FFFFFF;
   }
 
 .homepage
 {
     /*styles for the homepage div  */
-   margin-top: 15%;
+   margin-top: 10%;
    margin-left: 35%; 
 }
 

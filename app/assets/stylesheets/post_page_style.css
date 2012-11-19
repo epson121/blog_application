@@ -1,0 +1,67 @@
+.blog_page
+{
+	float:left;
+	width: 80%;
+	
+}
+
+.blog
+{
+	margin-left: 10%;
+}
+
+.blog_entry
+{
+
+}
+
+.comments
+{
+	width: 80%;
+	margin-left: 10%;
+}
+
+.comment
+{
+	border: #CCCCCC;
+	border-style: solid;
+	border-radius: 4px;
+}
+
+.comment_name_pos
+{
+	padding: 0px;
+	margin:0px;
+	background: #81BEF7;
+}
+
+.comment_name_style
+{
+	font-style: oblique;
+	font-size:medium;
+	color: #0B243B;
+}
+  
+.comment_text_pos
+{
+	margin-top: 2px;
+	margin-left: 10px;
+	background: #CEE3F6;
+	word-wrap: break-word;
+	font-size:small;
+}
+
+.comment_text_style
+{
+
+}
+
+.add_a_comment
+{
+	
+}
+
+hr
+{
+}
+

@@ -1,0 +1,46 @@
+<%= stylesheet_link_tag 'post_page_style'%>
+
+<%=render 'header'%>
+
+<div id = "blog_entry", class = "blog_page">
+	<div class = "blog">
+		<div class = "blog_entry">
+			<div id = "blog_entry_subject" class = "subject">
+				<%= @post.name %>
+				<%= link_to "Edit", :controller => "blog/post", :action => "edit" %>
+			</div>
+			<div id = "blog_entry_body", class = "body">
+				<%=raw @post.description%>
+			</div><br><br>
+			<hr><hr>
+		</div>
+		<div id = "blog_entry_comment" class = "comments">
+			<% @post.comments.each do |comment| %>
+			<div class = "comment">
+			  <p class = "comment_name_pos">
+			  <span class = "comment_name_style"> <b><%= comment.commenteer %></b></span>
+			  </p>
+			  <p class = "comment_text_pos">
+			    <span class = "comment_text_style"><%= comment.text %></span>
+			  </p>
+			</div>
+			<p></p>
+			<% end %>
+	
+			<div class = "add_a_comment">
+				<%= form_for([:blog, @post, @post.comments.build]) do |f| %>
+				  <div class="field">
+				    <%= f.label "Leave a comment" %><br />
+				    <%= f.text_field :commenteer, :size => 50, :placeholder => "Enter your name.." %>
+				  </div>
+				  <div class="field">
+				    <%= f.text_area(:text, :size => "50x4", :placeholder => "Add a comment..")	 %>
+				  </div>
+				  <div class="actions">
+				    <%= f.submit "Comment"%>
+				  </div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

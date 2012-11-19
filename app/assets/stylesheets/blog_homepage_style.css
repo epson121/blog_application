@@ -19,14 +19,14 @@ body
     font-size: 30px;
     font-style: normal;
     font-family: Courier;
-    height:35px;
+    height:6%;
 }
 
 .header_div_menu
 {	
     float:left;
     width:67%;
-    height:35px;
+    height:6%;
     padding:10px;
     padding-bottom:3px;
     margin: 0px;
@@ -76,28 +76,30 @@ a:hover
 .blog
 {
     /*Style for blog entry  */
-    margin-top: 10px;
+    margin-top: 2%;
     margin-left: 25%;
 }
 
 .blog .subject
 { 
     /* style for blog subject (name of the entry) */
-    height:32px;
+    height:6%;
     font-size: 30px;
     font-style: normal;
     font-variant: small-caps;
     border-style:dashed;
-	border-width:2px;
+	border-width:1px;
 	border-color: #D3D3D3; 
 	text-align: center;
+	font-family: Courier;
 }
   
 .blog .body
 {
     /* Style for the body of the entry (blog text) */
-    margin-left:5%;
+    margin-left:10%;
     margin-right:5%;
     margin-top:2%;
     font-size: 16px;
+    font-family: Helvetica;
 }

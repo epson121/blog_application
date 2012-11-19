@@ -1,12 +1,11 @@
 class PostController < ActionController::Base
  
   def index
+    @post = Post.all
   end
   
   def show
     @post = Post.find(params[:id])
-    @comments = @post.comments.all
-    @comment = Comment.new
   end
     
   def new

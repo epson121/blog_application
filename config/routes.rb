@@ -8,6 +8,7 @@ Blog::Application.routes.draw do
   # first created -> highest priority.
   match '/' => 'home#index'
   match '/blog' => 'blog#index'
+  match 'blog/home' => 'home#index'
   # Sample of regular route:
   # Keep in mind you can assign values other than :controller and :action
   # Sample of named route:
@@ -17,11 +18,10 @@ Blog::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   namespace :blog do
     resources :post do
-      resources :comment
+      resources :comments
     end
   end
 
-  map.resources :comments, :belongs_to => :posts
   # Sample resource route with options:
   #   resources :products do
   #     member do

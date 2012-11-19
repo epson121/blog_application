@@ -1,4 +1,4 @@
 class Comment < ActiveRecord::Base
-  attr_accessible :name, :text
+  attr_accessible :commenteer, :text
   belongs_to :post
 end

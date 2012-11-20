@@ -1,13 +1,4 @@
-<%= stylesheet_link_tag "blog_homepage_style.css" %>
-		<div class = "header_div_title">
-
-			<span> Josetxo : blog</span>
-			<span style="color: #8E8EFF" >_</span>
-		</div>
-		<div class = "header_div_menu"> 
-			<%= link_to "NewPost", new_blog_post_path %>&nbsp&nbsp
-			<%= link_to "Home", :controller => "home", :action => "index"  %>
-		</div>	
+<%= render "/post/header" %>
 
 <div class = "blog_all">
 <% if (@posts != nil)%>
@@ -17,7 +8,6 @@
 			<%= link_to p.name, :controller => "blog/post", :action => "show" , :id => p.id.to_s %>
 		</div>
 	</div>
-	<!--hr class = "hr_style"-->
 	<% end %>
 <% end%>
 </div>

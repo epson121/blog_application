@@ -2,37 +2,37 @@ body
 {
     /* body Style */
     background: #FFFFFF;
+    margin: 0px;
+    padding:0px;
 }
 
+.header
+{
+	float:left; 
+	height:6%;
+	width: 99%;
+	padding:10px;
+    padding-bottom:3px;
+    background: #000000;
+    color: #FFFFFF;
+    margin: 0px;
+    margin-top:0%;
+}
 
 .header_div_title
 {
     /* header div style */
-    float: left;
-    margin: 0px;
-    margin-top:0%;
+    float:left; 
     width:30%;
-    padding:10px;
-    padding-bottom:3px;
-    background: #000000;
-    color: #FFFFFF;
     font-size: 30px;
     font-style: normal;
     font-family: Courier;
-    height:6%;
 }
 
 .header_div_menu
-{	
-    float:left;
-    width:67%;
-    height:6%;
-    padding:10px;
-    padding-bottom:3px;
-    margin: 0px;
-    margin-top:0%;
-    background: #000000;
-    color: #FFFFFF;
+{
+	float:left;
+	width:70%;
     text-align: right;
 }
 	

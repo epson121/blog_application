@@ -28,10 +28,10 @@ class PostController < ActionController::Base
   end
   
   def update
-    @post = "Post successfully updated."
+    @p = "Post successfully updated."
     post_update = params[:post].merge(:description =>params[:text_content])
-    Post.update(params[:id], post_update)
-    redirect_to '/blog'
+    @post = Post.update(params[:id], post_update)
+    redirect_to blog_post_path(@post)
   end
   
   def destroy

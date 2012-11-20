@@ -1,4 +1,7 @@
+<%= stylesheet_link_tag "CRUD_post" %>
 <%= stylesheet_link_tag "blog_homepage_style.css" %>
+
+<div class = "header">
 	<div class = "header_div_title">
 	
 		<span> Josetxo : blog</span>
@@ -6,5 +9,7 @@
 	</div>
 	<div class = "header_div_menu"> 
 		<%= link_to "NewPost", new_blog_post_path %>&nbsp&nbsp
-		<%= link_to "Home", blog_path, :action => "index"  %>
+		<%= link_to "Blog", blog_path, :action => "index"  %>&nbsp&nbsp
+		<%= link_to "Home", root_path, :action => "index"  %>
 	</div>	
+</div>
